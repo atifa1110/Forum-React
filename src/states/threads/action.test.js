@@ -2,6 +2,34 @@ import { threadsThunks, threadsAction } from './action';
 import { threadsAPI } from '../../api/threads';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
+/**
+ * test scenario for threadsThunks
+ *
+ * - asyncCreateThreads
+ *   - should dispatch create action when API succeeds
+ *   - should throw error if API fails
+ *
+ * - asyncGetThreads
+ *   - should dispatch set action when API succeeds
+ *   - should throw error if API fails
+ *
+ * - asyncUpVoteThread
+ *   - should dispatch upVoteThread when success
+ *   - should throw error when failed
+ *
+ * - asyncDownVoteThread
+ *   - should dispatch downVoteThread when success
+ *   - should throw error when failed
+ *
+ * - asyncNeutralizeUpVoteThread
+ *   - should dispatch neutralizeUpVoteThread when success
+ *   - should throw error when failed
+ *
+ * - asyncNeutralizeDownVoteThread
+ *   - should dispatch neutralizeDownVoteThread when success
+ *   - should throw error when failed
+ */
+
 jest.mock('../../api/threads');
 jest.mock('react-redux-loading-bar', () => ({
   showLoading: jest.fn(() => ({ type: 'SHOW_LOADING' })),

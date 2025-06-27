@@ -20,7 +20,7 @@ describe('Login spec', () => {
     cy.get('input[type="email"]')
       .then(($input) => {
       expect($input[0].checkValidity()).to.be.false;
-      expect($input[0].validationMessage).to.eq('Please fill in this field.');
+      expect($input[0].validity.valueMissing).to.be.true;
     });
   });
 
@@ -34,7 +34,7 @@ describe('Login spec', () => {
      // Cek validasi native browser pada input password
     cy.get('input[type="password"]').then(($input) => {
       expect($input[0].checkValidity()).to.be.false;
-      expect($input[0].validationMessage).to.eq('Please fill in this field.');
+      expect($input[0].validity.valueMissing).to.be.true;
     });
   });
 

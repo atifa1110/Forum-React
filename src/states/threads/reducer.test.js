@@ -1,6 +1,20 @@
 import { threadsReducer } from './reducer';
 import { ThreadsActionType } from './action';
 
+/**
+ * test scenario for threadsReducer
+ *
+ * - threadsReducer function
+ *   - should return current state when given unknown action
+ *   - should return threads from SET action
+ *   - should prepend new thread on CREATE action
+ *   - should add userId to upVotesBy on UP_VOTE action
+ *   - should remove userId from upVotesBy on NEUTRALIZE_UP_VOTE
+ *   - should add userId to downVotesBy on DOWN_VOTE action
+ *   - should remove userId from downVotesBy on NEUTRALIZE_DOWN_VOTE
+ */
+
+
 describe('threadsReducer function', () => {
   const initialThreads = [
     {

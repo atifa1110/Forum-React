@@ -1,6 +1,15 @@
 import { isPreloadReducer } from './reducer';
 import { IsPreloadActionType } from './action';
 
+/**
+ * test scenario for isPreloadReducer
+ *
+ * - isPreloadReducer function
+ *   - should return initial state when given unknown action
+ *   - should return new preload state when given SET action (false)
+ *   - should return new preload state when given SET action (true)
+ */
+
 describe('isPreloadReducer function', () => {
   it('should return initial state when given unknown action', () => {
     const initialState = true;

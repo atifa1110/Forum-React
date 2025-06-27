@@ -3,6 +3,14 @@ import { usersAPI } from '../../api/users';
 import { usersActions } from './action';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
+/**
+ * test scenario for usersAction
+ *
+ * - usersAction function
+ *  - should dispatch set and hideLoading when success
+ *  - should not dispatch set but still dispatch hideLoading when failed
+ */
+
 jest.mock('../../api/users');
 
 describe('usersThunks.asyncGetUsers', () => {
