@@ -43,7 +43,7 @@ describe('authThunks.asyncLogin', () => {
     const fakeMessage = 'Invalid credentials';
     authAPI.login.mockResolvedValue({ status: 'failed', message: fakeMessage, token: null });
 
-    tokenHandler.set = jest.fn();
+    //tokenHandler.set = jest.fn();
     const dispatch = jest.fn();
 
     // Act & Assert
