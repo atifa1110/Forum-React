@@ -1,12 +1,58 @@
-# React + Vite
+# 🧠 Forum React – Discussion Platform
+
 ![CI](https://github.com/atifa1110/Forum-React/actions/workflows/ci.yml/badge.svg)
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+Forum React is a web-based discussion forum application built using **React**, featuring modern capabilities such as user authentication, a thread and comment system, voting, and search functionality. This project is also equipped with **CI/CD** integration, automated testing using **Jest** and **Cypress**, and branch protection on GitHub.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo  
 
-## Expanding the ESLint configuration
+🔗 [https://forum-react-two.vercel.app](https://forum-react-two.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Fitur Utama
+
+- 🔐 Autentikasi (Login, Register, Logout)
+- 🧵 Buat, baca, dan komentari thread diskusi
+- 📈 Upvote dan Downvote untuk thread & komentar
+- 🔎 Pencarian dan filter thread
+- 📱 Responsive – tampilan mobile-friendly
+- ✅ Unit testing (Jest) dan end-to-end testing (Cypress)
+- 🔁 CI/CD dengan GitHub Actions + proteksi branch
+- ☁️ Deployment otomatis menggunakan Vercel
+
+---
+
+## 🛠️ Teknologi yang Digunakan
+
+- Frontend: **React + Vite**
+- State Management: **Redux + Redux Thunk**
+- Routing: **React Router DOM**
+- Styling: **CSS Modules**
+- Testing: **Jest**, **React Testing Library**, **Cypress**
+- CI/CD: **GitHub Actions**, **start-server-and-test**
+- Deployment: **Vercel**
+
+---
+
+## 📦 Instalasi
+
+```bash
+git clone https://github.com/atifa1110/Forum-React.git
+cd Forum-React
+npm install
+npm run dev
+
+---
+
+## 🧪 Menjalankan Testing
+
+### ✅ Unit Test
+```bash
+npm run test
+
+### 🧪 E2E Test dengan Cypress
+npm run e2e
+
+### 🔁 CI Test (Jest + Cypress)
+npm run ci:test

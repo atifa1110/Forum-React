@@ -1,6 +1,24 @@
 import { threadReducer } from './reducer';
 import { ThreadActionType } from './action';
 
+/**
+* test scenario for detailReducer
+ *
+ * - threadReducer function
+ *   - should return initial state when action is unknown
+ *   - should set thread when SET action is dispatched
+ *   - should add user to upVotesBy when UP_VOTE action is dispatched
+ *   - should remove user from upVotesBy when NEUTRALIZE_UP_VOTE is dispatched
+ *   - should add user to downVotesBy when DOWN_VOTE action is dispatched
+ *   - should remove user from downVotesBy when NEUTRALIZE_DOWN_VOTE is dispatched
+ *   - should add comment when ADD_COMMENT action is dispatched
+ *   - should upvote a comment
+ *   - should neutralize upvote on a comment
+ *   - should downvote a comment
+ *   - should neutralize downvote on a comment
+ *
+ */
+
 describe('threadReducer function', () => {
   const baseThread = {
     id: 'thread-1',

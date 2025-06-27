@@ -1,6 +1,14 @@
 import { leaderboardReducer } from './reducer';
 import { leaderboardActionType } from './action';
 
+/**
+ * test scenario for leaderboardReducer
+ *
+ * - leaderboardReducer function
+ *   - should return initial state when given unknown action
+ *   - should return new leaderboard when given SET action
+ */
+
 describe('leaderboardReducer function', () => {
   it('should return initial state when given unknown action', () => {
     const initialState = null;

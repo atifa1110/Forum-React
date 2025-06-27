@@ -7,16 +7,42 @@ import { defineConfig } from 'eslint/config';
 import daStyle from 'eslint-config-dicodingacademy';
 
 export default defineConfig([
-  { files: ['**/*.{js,mjs,cjs,jsx}'], plugins: { js }, extends: ['js/recommended'] },
-  { files: ['**/*.{js,mjs,cjs,jsx}'], languageOptions: { globals: globals.browser } },
-  { files: ['**/*.test.{js,jsx}', '**/*.spec.{js,jsx}'],
-    plugins: { jest: pluginJest },
-    languageOptions: { globals: { ...globals.jest } },
-    rules: { ...pluginJest.configs.recommended.rules }
+  // ✅ Konfigurasi dasar JS
+  js.configs.recommended,
+
+  // ✅ Global browser
+  {
+    files: ['**/*.{js,mjs,cjs,jsx}'],
+    languageOptions: {
+      globals: globals.browser,
+    },
   },
-  { files: ['jest.setup.js'],
-    languageOptions: { globals: globals.node }
+
+  // ✅ Jest test files
+  {
+    files: ['**/*.test.{js,jsx}', '**/*.spec.{js,jsx}'],
+    plugins: {
+      jest: pluginJest,
+    },
+    languageOptions: {
+      globals: {
+        ...globals.jest,
+      },
+    },
+    rules: {
+      ...pluginJest.configs.recommended.rules,
+    },
   },
+
+  // ✅ Jest setup
+  {
+    files: ['jest.setup.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
+
+  // ✅ Cypress e2e test
   {
     files: ['cypress/e2e/**/*.cy.{js,jsx,ts,tsx}'],
     plugins: {
@@ -27,13 +53,16 @@ export default defineConfig([
         ...globals.browser,
         ...globals.node,
         ...globals.mocha,
-        ...pluginCypress.environments.globals,
       },
     },
     rules: {
       ...pluginCypress.configs.recommended.rules,
     },
   },
+
+  // ✅ React plugin
   pluginReact.configs.flat.recommended,
-  daStyle
+
+  // ✅ Dicoding style guide
+  daStyle,
 ]);
