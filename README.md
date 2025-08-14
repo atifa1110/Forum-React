@@ -4,6 +4,9 @@
 
 Forum React is a web-based discussion forum application built using **React**, featuring modern capabilities such as user authentication, a thread and comment system, voting, and search functionality. This project is also equipped with **CI/CD** integration, automated testing using **Jest** and **Cypress**, and branch protection on GitHub.
 
+## Preview 
+<img width="458" height="389" alt="Image" src="https://github.com/user-attachments/assets/02244bd5-3b21-463e-90ee-e3582773fdd7" />
+
 ## 🚀 Live Demo  
 
 🔗 [https://forum-react-two.vercel.app](https://forum-react-two.vercel.app)
