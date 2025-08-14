@@ -2,6 +2,14 @@ import { leaderboardThunks, leaderboardActions } from './action';
 import { leaderboardAPI } from '../../api/leaderboard';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
+/**
+ * test scenario for leaderboardTAction
+ *
+ * - asyncSetLeaderboard function
+ *   - should dispatch set leaderboard and hide loading when API call succeeds
+ *   - should throw error and hide loading when API call fails
+ */
+
 jest.mock('../../api/leaderboard');
 jest.mock('react-redux-loading-bar', () => ({
   showLoading: jest.fn(() => ({ type: 'SHOW_LOADING' })),

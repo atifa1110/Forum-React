@@ -15,6 +15,7 @@ import { tokenHandler } from '../../utils/accessToken';
  *   - should unset token and dispatch unset auth
  *
  */
+
 jest.mock('../../api/auth');
 jest.mock('../../api/users');
 jest.mock('../../utils/accessToken');

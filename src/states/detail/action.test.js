@@ -3,6 +3,50 @@ import { threadsAPI } from '../../api/threads';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import { commentsAPI } from '../../api/comments';
 
+/**
+ * test scenario for detailAction
+ *
+ * - asyncGetThread
+ *   - should dispatch get thread correct actions when API call succeeds
+ *   - should throw error and only show/hide loading when API fails
+ *
+ * - asyncUpVoteThread
+ *   - should dispatch correct actions when upvote succeeds
+ *   - should throw error and not dispatch set if failed
+ *
+ * - asyncNeutralizeUpVoteThread
+ *   - should dispatch correct actions when neutralize upvote succeeds
+ *   - should throw error and not dispatch set if neutralize vote failed
+ *
+ * - asyncDownVoteThread
+ *   - should dispatch correct actions when downvote succeeds
+ *   - should throw error and not dispatch set if downvote failed
+ *
+ * - asyncNeutralizeDownVoteThread
+ *   - should dispatch correct actions when neutralize downvote succeeds
+ *   - should throw error and not dispatch set if neutralize down vote failed
+ *
+ * - asyncAddComment
+ *   - should dispatch correct actions when add comment succeeds
+ *   - should throw error and not dispatch when add comment failed
+ *
+ * - asyncUpVoteComment
+ *   - should dispatch correct actions when upvote comment succeeds
+ *   - should throw error and not dispatch vote if upvote fails
+ *
+ * - asyncNeutralizeUpVoteComment
+ *   - should dispatch correct actions when neutralize up comment succeeds
+ *   - should throw error and not dispatch set if neutralize up comment failed
+ *
+ * - asyncDownVoteComment
+ *   - should dispatch correct actions when down vote comment succeeds
+ *   - should throw error and not dispatch vote if down vote comment fails
+ *
+ * - asyncNeutralizeDownVoteComment
+ *   - should dispatch correct actions when neutralize down comment succeeds
+ *   - should throw error and not dispatch set if neutralize down comment failed
+ */
+
 jest.mock('../../api/threads'); // important!
 jest.mock('../../api/comments'); // important!
 jest.mock('react-redux-loading-bar', () => ({

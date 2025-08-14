@@ -4,6 +4,15 @@ import { tokenHandler } from '../../utils/accessToken';
 import { usersAPI } from '../../api/users';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
+/**
+ * test scenario for isPreloadAction
+ *
+ * - isPreloadAction Function
+ *   - should dispatch set auth with user if token exists and API succeeds
+ *   - should dispatch set auth with null if token does not exist
+ *   - should dispatch set auth with null if API fails
+ */
+
 jest.mock('../../api/users');
 jest.mock('../../utils/accessToken');
 jest.mock('react-redux-loading-bar', () => ({
